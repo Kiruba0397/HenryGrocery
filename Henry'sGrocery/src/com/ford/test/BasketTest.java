@@ -1,8 +1,16 @@
 package com.ford.test;
 
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
+
+import com.ford.Basket;
+import com.ford.Henry;
+import com.ford.StockItem;
 
 public class BasketTest {
 	
