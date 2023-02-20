@@ -51,7 +51,7 @@ public class BasketTest {
         LocalDate future = today.plusDays(5);
 
         // Add 6 apples and a bottle of milk to be bought in 5 days time
-        basket.addItem(new StockItem("apples", "bag", 1.00, LocalDate.now()), 6);
+        basket.addItem(new StockItem("apples", "bag", 0.10, LocalDate.now()), 6);
         basket.addItem(new StockItem("milk", "bottle", 1.30, LocalDate.now()), 1);
 
         // Verify the total cost with apple discount in the future
@@ -66,7 +66,7 @@ public class BasketTest {
         LocalDate future = today.plusDays(5);
 
         // Add 3 apples, 2 tins of soup and a loaf of bread to be bought in 5 days time
-        basket.addItem(new StockItem("apples", "bag", 1.00, LocalDate.now()), 3);
+        basket.addItem(new StockItem("apples", "bag", 0.10, LocalDate.now()), 3);
         basket.addItem(new StockItem("soup", "tin", 0.65, LocalDate.now()), 2);
         basket.addItem(new StockItem("bread", "loaf", 0.80, LocalDate.now()), 1);
 
