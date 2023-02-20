@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class Basket {
     private Map<StockItem, Integer> items;
+    
+    
 
     public Basket() {
         items = new HashMap<>();
@@ -27,7 +29,7 @@ public class Basket {
         return items;
     }
 
-    public double getTotalCost(Henry henry,LocalDate purchaseDate) {
+    public double getTotalCost(LocalDate purchaseDate) {
         double total = 0.0;
         for (Map.Entry<StockItem, Integer> entry : items.entrySet()) {
             StockItem item = entry.getKey();

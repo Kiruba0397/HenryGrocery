@@ -8,7 +8,7 @@ public class ShoppingBasket {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         
-        Henry henry = new Henry();
+        //Henry henry = new Henry();
 
         System.out.println("Available items:");
         for (StockItem item : inventory.getStockItems()) {
@@ -46,7 +46,7 @@ public class ShoppingBasket {
             purchaseDate = LocalDate.parse(dateStr, DateTimeFormatter.ISO_LOCAL_DATE);
         }
 
-        double totalCost = basket.getTotalCost(henry,purchaseDate);
+        double totalCost = basket.getTotalCost(purchaseDate);
         System.out.printf("Total cost: %.2f\n", totalCost);
     }
 }

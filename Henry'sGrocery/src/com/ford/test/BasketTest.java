@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
 import com.ford.Basket;
-import com.ford.Henry;
+//import com.ford.Henry;
 import com.ford.StockItem;
 
 public class BasketTest {
@@ -17,7 +17,8 @@ public class BasketTest {
     @Test
     public void testSoupAndBreadOffer() {
         Basket basket = new Basket();
-        Henry henry = new Henry();
+        //Henry henry = new Henry();
+       
         LocalDate today = LocalDate.now();
 
         // Add 3 tins of soup and 2 loaves of bread
@@ -25,13 +26,13 @@ public class BasketTest {
         basket.addItem(new StockItem("bread", "loaf", 0.80, LocalDate.now()), 2);
 
         // Verify the total cost with soup and bread offer
-        assertEquals(3.15, basket.getTotalCost(henry, today));
+        assertEquals(3.15, basket.getTotalCost(today));
     }
     
     @Test
     public void testAppleDiscount() {
         Basket basket = new Basket();
-        Henry henry = new Henry();
+       // Henry henry = new Henry();
         LocalDate today = LocalDate.now();
 
         // Add 6 apples and a bottle of milk
@@ -39,13 +40,13 @@ public class BasketTest {
         basket.addItem(new StockItem("milk", "bottle", 1.30, LocalDate.now()), 1);
 
         // Verify the total cost with apple discount
-        assertEquals(1.90, basket.getTotalCost(henry, today));
+        assertEquals(1.90, basket.getTotalCost(today));
     }
 
     @Test
     public void testAppleDiscountFuture() {
         Basket basket = new Basket();
-        Henry henry = new Henry();
+        //Henry henry = new Henry();
         LocalDate today = LocalDate.now();
         LocalDate future = today.plusDays(5);
 
@@ -54,13 +55,13 @@ public class BasketTest {
         basket.addItem(new StockItem("milk", "bottle", 1.30, LocalDate.now()), 1);
 
         // Verify the total cost with apple discount in the future
-        assertEquals(1.84, basket.getTotalCost(henry, future));
+        assertEquals(1.84, basket.getTotalCost(future));
     }
 
     @Test
     public void testSoupBreadAndAppleDiscountFuture() {
         Basket basket = new Basket();
-        Henry henry = new Henry();
+        //Henry henry = new Henry();
         LocalDate today = LocalDate.now();
         LocalDate future = today.plusDays(5);
 
@@ -70,7 +71,7 @@ public class BasketTest {
         basket.addItem(new StockItem("bread", "loaf", 0.80, LocalDate.now()), 1);
 
         // Verify the total cost with soup, bread and apple discount in the future
-        assertEquals(1.97, basket.getTotalCost(henry, future));
+        assertEquals(1.97, basket.getTotalCost(future));
     }
 
 }
