@@ -8,7 +8,7 @@ public class ShoppingBasket {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         
-        //Henry henry = new Henry();
+        
 
         System.out.println("Available items:");
         for (StockItem item : inventory.getStockItems()) {
@@ -28,7 +28,7 @@ public class ShoppingBasket {
             } else {
                 System.out.printf("Enter the quantity of %s you want to add to the basket: ", stockItem.getName());
                 int quantity = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character
+                scanner.nextLine(); 
 
                 basket.addItem(stockItem, quantity);
 

@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
 import com.ford.Basket;
-//import com.ford.Henry;
+
 import com.ford.StockItem;
 
 public class BasketTest {
@@ -17,7 +17,7 @@ public class BasketTest {
     @Test
     public void testSoupAndBreadOffer() {
         Basket basket = new Basket();
-        //Henry henry = new Henry();
+
        
         LocalDate today = LocalDate.now();
 
@@ -32,7 +32,7 @@ public class BasketTest {
     @Test
     public void testAppleDiscount() {
         Basket basket = new Basket();
-       // Henry henry = new Henry();
+
         LocalDate today = LocalDate.now();
 
         // Add 6 apples and a bottle of milk
@@ -46,7 +46,7 @@ public class BasketTest {
     @Test
     public void testAppleDiscountFuture() {
         Basket basket = new Basket();
-        //Henry henry = new Henry();
+     
         LocalDate today = LocalDate.now();
         LocalDate future = today.plusDays(5);
 
@@ -61,7 +61,7 @@ public class BasketTest {
     @Test
     public void testSoupBreadAndAppleDiscountFuture() {
         Basket basket = new Basket();
-        //Henry henry = new Henry();
+     
         LocalDate today = LocalDate.now();
         LocalDate future = today.plusDays(5);
 
