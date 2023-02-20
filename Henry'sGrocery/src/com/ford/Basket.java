@@ -21,13 +21,6 @@ public class Basket {
         items.put(item, items.getOrDefault(item, 0) + quantity);
     }
 
-    public int getItemCount(StockItem item) {
-        return items.getOrDefault(item, 0);
-    }
-
-    public Map<StockItem, Integer> getItems() {
-        return items;
-    }
 
     public double getTotalCost(LocalDate purchaseDate) {
         double total = 0.0;
