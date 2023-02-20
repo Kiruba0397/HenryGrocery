@@ -34,7 +34,7 @@ public class StockItem {
 
     public double getDiscountedPrice(LocalDate purchaseDate) {
         if (ChronoUnit.DAYS.between(purchaseDate, expiryDate) <= 2) {
-            return cost * 0.8;
+            return cost * 0.1;
         } else {
             return cost;
         }
